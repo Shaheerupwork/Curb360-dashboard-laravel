@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
+use App\Http\Controllers\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,7 @@ use App\Http\Controllers\PageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
+Route::get('/about', [WebsiteController::class, 'about']);
 Route::get('/', function () {
     return view('index');
 });
