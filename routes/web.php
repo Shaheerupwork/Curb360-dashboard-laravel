@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebsiteController;
-
+use App\Http\Controllers\adminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,8 @@ use App\Http\Controllers\WebsiteController;
 |
 */
 Route::get('/about', [WebsiteController::class, 'about']);
-Route::get('/', function () {
-    return view('index');
-});
+
+
+
+Route::get('/', [WebsiteController::class, 'login']);
+Route::post('/dashboard', [adminController::class, 'index']);
