@@ -5,7 +5,7 @@
 <div id="content">
     <!-- Begin Page Content -->
      
-    <form action="setting_data_show.php" method="post" enctype="multipart/form-data">
+    <form action="" method="post" enctype="multipart/form-data">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10">
@@ -19,17 +19,7 @@
                         </div>
                     </div>
                     
-                    <?php
-                    include('config.php');
-                    // $id = $_GET['id'];
-                    $sql =  "SELECT * FROM `setting-data`";
-
-                    $res = mysqli_query($conn, $sql);
-
-
-                    while ($row = mysqli_fetch_assoc($res)) {
-                         
-                    ?>
+                  
 
                         <section class="setting-page pt-5">
                             <div>
@@ -39,21 +29,21 @@
                                 <div class="col-lg-6">
                                     <label>Heading</label>
                                     <div class="label"></div>
-                                    <input type="text" class="input-field" value="<?php echo $row['location_box_heading']; ?>" name="location-box-heading">
+                                    <input type="text" class="input-field" value="" name="location-box-heading">
                                 </div>
 
 
                                 <div class="col-lg-6">
                                     <label>Content</label>
                                     <div class="label"></div>
-                                    <input type="text" class="input-field" value="<?php echo $row['location_box_content']; ?>" name="location-box-content">
+                                    <input type="text" class="input-field" value="" name="location-box-content">
                                 </div>
 
 
                                 <div class="col-lg-12 pt-4">
                                     <h4>Map Box</h4>
                                     <label>Heading</label>
-                                    <input type="text" class="input-field" value="<?php echo $row['map_box_heading']; ?>" name="map-box-heading">
+                                    <input type="text" class="input-field" value="" name="map-box-heading">
                                 </div>
 
 
@@ -68,7 +58,7 @@
                                 <div class="col-lg-12">
                                     <label>Heading</label>
                                     <div class="label"></div>
-                                    <input type="text" class="input-field" value="<?php echo $row['select_services_heading']; ?>" name="select-services-heading">
+                                    <input type="text" class="input-field" value="" name="select-services-heading">
                                 </div>
 
                             </div>
@@ -82,15 +72,15 @@
                                     <div class="s&pcard">
                                         <h4> Services</h4>
                                         <div class="s$pdropify" style="width:100%;">
-                                            <input name="services-img" type="file" class="dropify" data-height="100"  data-default-file="./services-images/<?php echo $row['services_img']; ?>" />
+                                            <input name="services-img" type="file" class="dropify" data-height="100"  data-default-file="./services-images/" />
                                         </div>
                                         <label>Heading</label>
                                         <div class="label"></div>
-                                        <input type="text" class="input-field" name="services-heading" value="<?php echo $row['services_heading']; ?>">
+                                        <input type="text" class="input-field" name="services-heading" value="">
                                         <div class="class">
                                             <label>Content</label>
                                             <div class="label"></div>
-                                            <input type="text" class="input-field" value="<?php echo $row['services_content']; ?>" name="services-content">
+                                            <input type="text" class="input-field" value="" name="services-content">
                                         </div>
                                     </div>
                                 </div>
@@ -98,15 +88,15 @@
                                 <div class="col-lg-6 pt-5">
                                     <div class="s&pcard">
                                         <h4>Packages</h4>
-                                        <img src="./packages-images/<?php echo $row['packages_img']; ?>" />
+                                        <img src="./packages-images/" />
                                         <input type="file" name="packages-img" /> 
                                         <label>Heading</label>
                                         <div class="label"></div>
-                                        <input type="text" class="input-field" value="<?php echo $row['packages_heading']; ?>" name="packages-heading">
+                                        <input type="text" class="input-field" value="" name="packages-heading">
                                         <div class="class">
                                             <label>Content</label>
                                             <div class="label"></div>
-                                            <input type="text" class="input-field" value="<?php echo $row['packages_content']; ?>" name="packages-content">
+                                            <input type="text" class="input-field" value="" name="packages-content">
                                         </div>
                                     </div>
 
@@ -115,10 +105,7 @@
 
                             </div>
                         </section>
-
-                    <?php } ?>
-
-                    
+                
                     <!-- //   end  // -->
                     <section class="setting-page">
                         <div class="row">

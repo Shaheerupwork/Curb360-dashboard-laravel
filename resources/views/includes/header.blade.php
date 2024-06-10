@@ -35,9 +35,9 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <img src="img/logo_main_new.png" alt="" class="logoone">
+                    <img src="{{ asset('assets/img/logo_main_new.png') }}" alt="" class="logoone">
                 </div>
                 <div class="sidebar-brand-text mx-3"></div>
             </a>
@@ -50,7 +50,7 @@
             <ul class="sidebar-menu">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php">
+                    <a class="nav-link" href="{{ url('/') }}">
 
                         <i class='bx bxs-dashboard sidebar-text'></i>
                         <span class="sidebar-text">Dashboard</span></a>
@@ -62,48 +62,57 @@
 
                 <!-- Heading -->
                 <li class="nav-item">
-                    <a class="nav-link" href="zones.php">
+                    <a class="nav-link" href="{{ route('zones') }}">
                         <i class='bx bx-globe'></i>
                         <span class="sidebar-text">Zones</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Services.php">
+                    <a class="nav-link" href="{{ route('services') }}">
                         <i class='bx bxs-brightness'></i>
                         <span class="sidebar-text">Services</span></a>
                 </li>
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Packages.php">
+                    <a class="nav-link" href="{{ route('packages') }}">
                         <i class='bx bx-package'></i>
                         <span class="sidebar-text">Packages</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Coupons.php">
+                    <a class="nav-link" href="{{ route('coupons') }}">
                         <i class='bx bxs-coupon'></i>
                         <span class="sidebar-text">Coupons</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="Addons.php">
+                    <a class="nav-link" href="{{ route('addons') }}">
                         <i class='bx bx-message-square-add'></i>
                         <span class="sidebar-text">Addons</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="setting.php">
+                    <a class="nav-link" href="{{ route('setting') }}">
                         <i class='bx bxs-cog'></i>
                         <span class="sidebar-text">Setting</span></a>
                 </li>
 
 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="logout.php">
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                        <li class="nav-item">
+                        <button type="submit" class="nav-link">
+                            <i class='bx bx-right-arrow-circle'></i>
+                            Logout
+                        </button>
+                    </li>
+                    </form>
+                {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{ route('register') }}">
                         <i class='bx bx-right-arrow-circle'></i>
-                        <span>logout</span></a>
-                </li>
+                        <span>sign up</span></a>
+                </li> --}}
 
             </ul>
 
@@ -131,7 +140,7 @@
                         <span class="mr-2 text-dark text-capitalize">
                             admin
                         </span>
-                        <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                        <img class="img-profile rounded-circle" src="{{ asset('assets/img/undraw_profile.svg') }}">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

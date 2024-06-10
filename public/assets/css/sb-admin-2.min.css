@@ -12149,13 +12149,13 @@ form.user .custom-checkbox.small label {
 form.user .form-control-user {
     font-size: .8rem;
     border-radius: 10px;
-    padding: 1.5rem 1rem
+    padding: 1.5rem 1rem;
 }
 
 form.user .btn-user {
     font-size: .8rem;
     border-radius: 10px;
-    padding: .75rem 1rem
+    padding: .75rem 1rem;
 }
 
 .btn-google {
@@ -12795,17 +12795,11 @@ ul.sidebar-menu {
     gap: 10px;
 }
 
-ul.sidebar-menu a {
-    padding: 8px 0px !important;
-    font-size: 15px;
-}
-
-
-ul.sidebar-menu a i {
+ul.sidebar-menu a i ,ul.sidebar-menu button i {
     font-size: 23px !important;
 }
 
-ul.sidebar-menu a {
+ul.sidebar-menu a,ul.sidebar-menu button {
     padding: 8px 0px !important;
     font-size: 15px;
     display: flex !important;
@@ -12978,4 +12972,8 @@ section.setting-page.pt-4 h4{
 .dropify-wrapper .dropify-message span.file-icon {
     font-size: 79px !important;
     color: #CCC;
+}
+button.nav-link {
+    background: transparent;
+    border: 0;
 }
